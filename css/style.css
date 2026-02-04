@@ -1,3 +1,6 @@
+[hidden]{
+    display: none !important;
+}
 body{
     height: 100vh;
     margin: 0;
@@ -25,6 +28,11 @@ header{
 
 header h1{
     margin-left: 50px;
+}
+header button{
+    margin: 0;
+    background-color: #FFFFFF;
+    color: #2196F3;
 }
 
 /* Login */
@@ -63,14 +71,21 @@ div.email p{
     margin-left: 2px;
 }
 
+div.reg-password p{
+    margin-bottom: 0;
+    margin-left: 2px;
+}
+
 /* User Input */
 
-input{
+input[type="text"],
+input[type="password"],
+input[type="email"] {
     width: 100%;
     height: 30px;
     border: .5px solid #76BFF7;
     border-radius: 10px;
-    color: #FFFFFF;
+    /* color: #FFFFFF; */
     margin-top: 10px;
     padding: 10px;
     margin-left: 0;
@@ -105,4 +120,44 @@ div.message{
     margin-top: 5%;
     padding: 50px;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.list-of-todo{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    justify-content: left;
+    gap: 10px;
+}
+.row-of-todo{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    color: #2196F3;
+    align-items: center;
+    border: 1px solid #76BFF7;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+
+.row-of-todo button{
+    margin: 0;
+}
+
+.item-label{
+    width: 350px;
+}
+
+input[type="checkbox"]{
+    border: .5px solid #76BFF7;
+}
+
+/* Edit */
+
+.form-edit input{
+    border: 1px solid #76BFF7;
+
 }

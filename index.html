@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Memory Game</title>
+    <title>To-Do List</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&display=swap">
 </head>
@@ -12,15 +12,16 @@
     <div class="container">
         <header>
             <h1 class="header">To-Do List</h1>
-            <p class="header"><a href="html/login.html">login</a></p>
+            <button onclick="revealedLogin()" class="header-login-btn">login</button>
+            <button onclick="logoutUser()" class="logout-btn" hidden>logout</button>
         </header>
 
         <div class="log-reg-container">
-            <div class="login">
+            <form class="login">
                 <h2>Login</h2>
     
                 <div class="username">
-                    <p>Username</p>
+                    <p>Username/Email</p>
                     <input type="text" placeholder="Username">
                 </div>
     
@@ -30,38 +31,31 @@
                 </div>
 
                 <button class="login-btn">Login</button>
-            </div>
+            </form>
     
             <p>OR</p>
     
-            <div class="register">
+            <form class="register">
                 <h2>Register</h2>
-                <div class="first-name">
-                    <p>First Name</p>
-                    <input type="text" placeholder="First Name">
-                </div>
-                <div class="last-name">
-                    <p>Last Name</p>
-                    <input type="text" placeholder="Last Name">
-                </div>
                 <div class="email">
-                    <p>Email</p>
+                    <p>Username/Email</p>
                     <input type="email" placeholder="Email">
                 </div>
-                <div class="password">
+                <div class="reg-password">
                     <p>Password</p>
                     <input type="password" placeholder="Password">
                 </div>
     
                 <button class="register-btn">Register</button>
-            </div>
+            </form>
         </div>
 
         <div class="message" hidden>
             <p>Message Goes here</p>
+            <button onclick="revealed()">Back to Todo page</button>
         </div>
 
-        <div class="to-do" hidden>
+        <form class="to-do" hidden>
 
             <h2>To Do List</h2>
             <div class="title">
@@ -73,7 +67,11 @@
                 <input type="text" placeholder="Description">
             </div>
             <button class="create">Create</button>
-        </div>
+
+            <div class="list-of-todo" hidden>
+
+            </div>
+        </form>
 
 
     </div>
